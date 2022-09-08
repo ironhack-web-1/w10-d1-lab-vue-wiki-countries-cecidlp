@@ -1,12 +1,18 @@
 <template>
-  <div className="app">
-    <header className="app-header">
-      <p>
-        Edit <code>src/main.js</code> and save to reload.
-      </p>
-    </header>
+  <div class="app">
+    <NavBar/>
   </div>
 </template>
+
+
+<script>
+  import NavBar from './components/NavBar.vue';
+  export default {
+    components: {
+      NavBar,
+    }
+  };
+</script>
 
 <style>
 body {
