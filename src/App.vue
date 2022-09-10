@@ -1,16 +1,20 @@
 <template>
   <div class="app">
-    <NavBar/>
+    <NavBar/> <CountriesListVue :countries="countries"/>
+    <router-view/>
   </div>
 </template>
 
 
 <script>
   import NavBar from './components/NavBar.vue';
+  import CountriesListVue from './components/CountriesList.vue';
+  import countries from "./countries.json";
   export default {
     components: {
-      NavBar,
-    }
+      NavBar, CountriesListVue,
+    },
+    data() { return { countries: countries } }
   };
 </script>
 
