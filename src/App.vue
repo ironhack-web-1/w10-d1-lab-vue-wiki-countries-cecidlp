@@ -1,12 +1,22 @@
 <template>
-  <div className="app">
-    <header className="app-header">
-      <p>
-        Edit <code>src/main.js</code> and save to reload.
-      </p>
-    </header>
+  <div class="app">
+    <NavBar/> <CountriesListVue :countries="countries"/>
+    <router-view/>
   </div>
 </template>
+
+
+<script>
+  import NavBar from './components/NavBar.vue';
+  import CountriesListVue from './components/CountriesList.vue';
+  import countries from "./countries.json";
+  export default {
+    components: {
+      NavBar, CountriesListVue,
+    },
+    data() { return { countries: countries } }
+  };
+</script>
 
 <style>
 body {
